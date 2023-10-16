@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <style>
+        *{
+            background-color: rgb(0, 156, 218);
+        }
+        p{
+            color: white;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        form{
+            display: flex;
+            justify-content: center;
+        }
+        .field{
+            border: 1px solid black;
+            height: 650px;
+            width: 25%;
+            background-color: white;
+            
+        }
+        label{
+            margin-left: 7%;
+            background-color: white;
+        }
+        input,select{
+            display: block;
+            margin-left: 7%;
+            margin-top: 10px;
+            background-color: white;
+            height:20px ;
+            width: 300px;
+            border: 2px solid black;
+        }
+        input[type=radio]{
+            display: inline-block;
+            width: auto;
+            height: auto;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        input[type=submit],input[type=reset]{
+            background-color: rgb(0, 156, 218);
+            border-radius: 5px;
+            border: none;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <p>Customer Survey Form</p>
+    <form>
+
+        <div class="field">
+            <label for="fname">First name</label>
+                <input id="fname" name="name" required><br>
+            <label for="lname">Last name</label>
+                <input id="lname" name="name" required><br>
+            <label for="date of birth">Date of birth:</label>
+                <input type="date" id="date of birth" value="DD/MM/YY" required><br>
+            <label>Gender:</label><br>
+                <input type="radio" id="male" name="gender">Male 
+                <input type="radio" id="female" name="gender">Female<br> 
+            <label for="email">Email:</label>
+                <input id="email"><br>
+            <label for="mobile number">Phone number:</label>
+                <input id="phone number" required><br>
+            <label for="country">Country</label> <br>
+            <select id="country">
+                <option name="default">select</option>
+                <option>INDIA</option>
+                <option>USA</option>
+                <option>UK</option>   
+            </select><br>
+            <label>Profession</label>
+                <input type="text"><br>
+                <input type="submit" value="submit">
+                <input type="reset" value="reset">
+           
+        </div>
+
+    </form>
+  
+</body>
+</html>

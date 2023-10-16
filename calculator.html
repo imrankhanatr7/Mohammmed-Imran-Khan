@@ -1,0 +1,104 @@
+<!DOCTYPE html> 
+<html> 
+
+<head> 
+	<title>HTML Calculator</title> 
+
+	<style> 
+		*{
+			background-color: lightgray;
+		}
+		table { 
+			border:none;
+			margin-left: auto;  
+			margin-right: auto;
+			margin-top: 50px; 
+		} 
+		
+		input[type="button"] { 
+			width: 100%; 
+			padding: 20px 40px; 
+			color: white; 
+			font-size: 24px; 
+			font-weight: 400; 
+			border: none; 
+			
+		} 
+		
+		input[type="text"] {
+			background-color: white; 
+			padding: 20px 30px; 
+			font-size: 24px; 
+			font-weight: 400; 
+			outline: none;
+			border: none; 
+		}
+		
+		.num{
+			background-color: rgb(29, 29, 29);
+		}
+		.ac{
+			background-color: #1eaf9e;
+		}
+		.sec{
+			background-color: grey;
+		}
+		
+	</style> 
+</head> 
+
+<body> 
+	
+	<div class="background">
+		<table id="calcu" cellspacing="0" cellpadding="0"> 
+			<tr> 
+				<td colspan="3" class="result"> 
+					<input type="text" id="result"> 
+				</td> 
+				<td><input type="button" value="AC" class="ac"   onclick="clearScrn()"></td> 
+			</tr> 
+
+			<tr> 
+				<td><input type="button" value="9" class="num" onclick="result('9')"></td> 
+				<td><input type="button" value="8" class="num" onclick="result('8')"></td> 
+				<td><input type="button" value="7" class="num" onclick="result('7')"></td> 
+				<td><input type="button" value="+" class="sec" onclick="result('+')"></td> 
+			</tr> 
+			<tr> 
+				<td><input type="button" value="4" class="num" onclick="result('4')"></td> 
+				<td><input type="button" value="5" class="num" onclick="result('5')"></td> 
+				<td><input type="button" value="6" class="num" onclick="result('6')"></td> 
+				<td><input type="button" value="-" class="sec" onclick="result('-')"></td> 
+			</tr> 
+			<tr> 
+				<td><input type="button" value="1" class="num" onclick="result('1')"></td> 
+				<td><input type="button" value="2" class="num" onclick="result('2')"></td> 
+				<td><input type="button" value="3" class="num" onclick="result('3')"></td> 
+				<td><input type="button" value="&#247" class="sec" onclick="result('/')"></td> 
+			</tr> 
+			<tr> 
+				<td><input type="button" value="." class="num" onclick="result('.')"></td> 
+				<td><input type="button" value="0" class="num" onclick="result('0')"></td> 
+				<td><input type="button" value="=" class="num" onclick="Calculate()"></td> 
+				<td><input type="button" value="x" class="sec"
+				onclick="result('*')"></td> 
+			</tr> 
+		</table>
+	</div> 
+
+	<script>
+		function clearScrn(){
+			document.getElementById("result").value ="";
+		}
+		function result(value){
+			document.getElementById("result").value += value;
+		}
+		function Calculate(){
+			var a = document.getElementById("result").value;
+			var b = eval(a);
+			document.getElementById("result").value=b;
+		}
+	</script>
+</body> 
+
+</html> 
